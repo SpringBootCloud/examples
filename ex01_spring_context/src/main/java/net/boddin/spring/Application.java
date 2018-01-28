@@ -14,7 +14,7 @@ public class Application {
     MessageService messageServiceImpl() {
         return new MessageService() {
             public String getMessage() {
-                return "Hello World!";
+                return "Hello Spring Context!";
             }
         };
     }
