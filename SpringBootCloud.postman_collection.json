@@ -1,0 +1,418 @@
+{
+	"info": {
+		"name": "SpringBootCloud",
+		"_postman_id": "9d2c04d1-0b56-4e73-4bfe-bb1826cd53eb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ex04_requestmapping",
+			"description": "",
+			"item": [
+				{
+					"name": "/demo/one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/one",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"one"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/multi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/multimap",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"multimap"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/multimap",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/multimap",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"multimap"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"all"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/headers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-custom",
+								"value": "one"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/headers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"headers"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/json",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"json"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/xml",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"xml"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/jsonxml",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/jsonxml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"jsonxml"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/consume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"consume me\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/consume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"consume"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/demo/consume/default",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/consume/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"consume",
+								"default"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/path/simple/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/path/simple/SpringBoot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"path",
+								"simple",
+								"SpringBoot"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/path/named/{name}/{surname}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/path/named/Mike/Boddin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"path",
+								"named",
+								"Mike",
+								"Boddin"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/path/optional/{name}/{surname} copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/path/optional/Mike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"path",
+								"optional",
+								"Mike"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/path/regex/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/path/regex/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"path",
+								"regex",
+								"12"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
