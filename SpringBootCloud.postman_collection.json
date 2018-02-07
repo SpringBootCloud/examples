@@ -361,7 +361,7 @@
 					"response": []
 				},
 				{
-					"name": "/path/optional/{name}/{surname} copy",
+					"name": "/path/optional/{name}/{surname}",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -406,6 +406,123 @@
 								"path",
 								"regex",
 								"12"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/param/optional/?name=...",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/param/optional?name=My_Name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"param",
+								"optional"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "My_Name",
+									"equals": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/param/required/?name=...",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/param/required?name=My_Name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"param",
+								"required"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "My_Name",
+									"equals": true
+								}
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/fallback/* (single)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/fallback/single",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fallback",
+								"single"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "/fallback/multi/**",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<anything>\n    <name>xml</name>\n</anything>"
+						},
+						"url": {
+							"raw": "http://localhost:8080/fallback/multi/one/two/three",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fallback",
+								"multi",
+								"one",
+								"two",
+								"three"
 							]
 						},
 						"description": null

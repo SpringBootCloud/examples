@@ -1,4 +1,4 @@
-package net.boddin.clouddemo;
+package net.boddin.clouddemo.dto;
 
 public class ExampleDto {
     private String name;

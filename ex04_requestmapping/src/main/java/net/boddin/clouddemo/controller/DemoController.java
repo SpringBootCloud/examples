@@ -1,6 +1,6 @@
-package net.boddin.clouddemo;
+package net.boddin.clouddemo.controller;
 
-import org.springframework.http.RequestEntity;
+import net.boddin.clouddemo.dto.ExampleDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
