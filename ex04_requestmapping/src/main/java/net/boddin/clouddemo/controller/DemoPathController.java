@@ -18,13 +18,15 @@ public class DemoPathController {
 
     @RequestMapping("/named/{name}/{surname}")
     public @ResponseBody
-    ExampleDto getPathNamed(@PathVariable("surname") String secondName, @PathVariable("name") String firstName) {
+    ExampleDto getPathNamed(@PathVariable("surname") String secondName,
+                            @PathVariable("name") String firstName) {
         return new ExampleDto(String.format("%s %s", firstName, secondName));
     }
 
     @RequestMapping({"/optional/{name}/{surname}", "/optional/{name}"})
     public @ResponseBody
-    ExampleDto getPathOptional(@PathVariable String name, @PathVariable(required = false) String surname) {
+    ExampleDto getPathOptional(@PathVariable String name,
+                               @PathVariable(required = false) String surname) {
         return new ExampleDto(String.format("optional %s %s", name, surname));
     }
 
