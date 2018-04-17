@@ -1,8 +1,7 @@
 {
 	"info": {
-		"name": "SpringBootCloud",
 		"_postman_id": "9d2c04d1-0b56-4e73-4bfe-bb1826cd53eb",
-		"description": "",
+		"name": "SpringBootCloud",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -30,8 +29,7 @@
 								"demo",
 								"one"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -55,8 +53,7 @@
 								"demo",
 								"multimap"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -80,8 +77,7 @@
 								"demo",
 								"multimap"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -105,8 +101,7 @@
 								"demo",
 								"all"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -135,8 +130,7 @@
 								"demo",
 								"headers"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -170,8 +164,7 @@
 								"demo",
 								"json"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -205,8 +198,7 @@
 								"demo",
 								"xml"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -241,8 +233,7 @@
 								"demo",
 								"jsonxml"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -271,8 +262,7 @@
 								"demo",
 								"consume"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -302,8 +292,7 @@
 								"consume",
 								"default"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -328,8 +317,7 @@
 								"simple",
 								"SpringBoot"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -355,8 +343,7 @@
 								"Mike",
 								"Boddin"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -381,8 +368,7 @@
 								"optional",
 								"Mike"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -407,8 +393,7 @@
 								"regex",
 								"12"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -435,12 +420,10 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "My_Name",
-									"equals": true
+									"value": "My_Name"
 								}
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -467,12 +450,10 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "My_Name",
-									"equals": true
+									"value": "My_Name"
 								}
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -496,8 +477,7 @@
 								"fallback",
 								"single"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -524,8 +504,149 @@
 								"two",
 								"three"
 							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ex05_springdata",
+			"description": "",
+			"item": [
+				{
+					"name": "/contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contacts/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"eventKey\":\"repo:refs_changed\",\"date\":\"2018-04-10T11:06:20+0200\",\"actor\":{\"name\":\"mike.boddin\",\"emailAddress\":\"mike.boddin@devlab.expert\",\"id\":301,\"displayName\":\"Mike Boddin\",\"active\":true,\"slug\":\"mike.boddin\",\"type\":\"NORMAL\"},\"repository\":{\"slug\":\"nextplayer\",\"id\":146,\"name\":\"nextplayer\",\"scmId\":\"git\",\"state\":\"AVAILABLE\",\"statusMessage\":\"Available\",\"forkable\":true,\"project\":{\"key\":\"GROUP\",\"id\":41,\"name\":\"groupm\",\"public\":false,\"type\":\"NORMAL\"},\"public\":false},\"changes\":[{\"ref\":{\"id\":\"refs/heads/feature/mike_sprint2\",\"displayId\":\"feature/mike_sprint2\",\"type\":\"BRANCH\"},\"refId\":\"refs/heads/feature/mike_sprint2\",\"fromHash\":\"0f0364512a5ad083c005a2f5d660396e212b4207\",\"toHash\":\"9b2650f0382c4c7c2a6beeee8f58d141f4b19e3b\",\"type\":\"UPDATE\"}]}\r\n"
 						},
-						"description": null
+						"url": {
+							"raw": "http://localhost:8080/contacts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contacts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contacts/{id}/short",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"eventKey\":\"repo:refs_changed\",\"date\":\"2018-04-10T11:06:20+0200\",\"actor\":{\"name\":\"mike.boddin\",\"emailAddress\":\"mike.boddin@devlab.expert\",\"id\":301,\"displayName\":\"Mike Boddin\",\"active\":true,\"slug\":\"mike.boddin\",\"type\":\"NORMAL\"},\"repository\":{\"slug\":\"nextplayer\",\"id\":146,\"name\":\"nextplayer\",\"scmId\":\"git\",\"state\":\"AVAILABLE\",\"statusMessage\":\"Available\",\"forkable\":true,\"project\":{\"key\":\"GROUP\",\"id\":41,\"name\":\"groupm\",\"public\":false,\"type\":\"NORMAL\"},\"public\":false},\"changes\":[{\"ref\":{\"id\":\"refs/heads/feature/mike_sprint2\",\"displayId\":\"feature/mike_sprint2\",\"type\":\"BRANCH\"},\"refId\":\"refs/heads/feature/mike_sprint2\",\"fromHash\":\"0f0364512a5ad083c005a2f5d660396e212b4207\",\"toHash\":\"9b2650f0382c4c7c2a6beeee8f58d141f4b19e3b\",\"type\":\"UPDATE\"}]}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contacts/1/short",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contacts",
+								"1",
+								"short"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contacts/{id}/firstname",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Mike\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contacts/2/firstname",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contacts",
+								"2",
+								"firstname"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/contacts/query/custom",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Mike\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/contacts/query/custom?value=mike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contacts",
+								"query",
+								"custom"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "mike"
+								}
+							]
+						}
 					},
 					"response": []
 				}

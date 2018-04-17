@@ -1,5 +1,6 @@
 package net.boddin.clouddemo;
 
+import net.boddin.clouddemo.entity.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
