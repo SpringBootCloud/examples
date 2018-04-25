@@ -20,7 +20,7 @@ public class DemoPathController {
     public @ResponseBody
     ExampleDto getPathNamed(@PathVariable("surname") String secondName,
                             @PathVariable("name") String firstName) {
-        return new ExampleDto(String.format("%s %s", firstName, secondName));
+        return new ExampleDto(String.format("%s %s hllo", firstName, secondName));
     }
 
     @RequestMapping({"/optional/{name}/{surname}", "/optional/{name}"})
@@ -30,7 +30,7 @@ public class DemoPathController {
         return new ExampleDto(String.format("optional %s %s", name, surname));
     }
 
-    @RequestMapping("/regex/{id:[\\d]+}")
+    @RequestMapping("/regex/{id}")
     public @ResponseBody
     ExampleDto getPath(@PathVariable int id) {
         return new ExampleDto("hello " + id);

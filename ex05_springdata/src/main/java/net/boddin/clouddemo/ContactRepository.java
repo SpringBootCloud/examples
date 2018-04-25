@@ -10,11 +10,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 
-@Transactional
+@Transactional()
 public interface ContactRepository extends CrudRepository<Contact, Long> {
 
     Collection<Contact> findByLastNameLikeIgnoreCase(String lastName);
     long countByLastNameLikeIgnoreCase(String lastName);
+
+    @Query("select c from Contact c where c.firstName = ?1")
+    Collection<Contact> countAllByFirstName1(String f);
 
     Collection<Contact> findCustom(String value);
 

@@ -4,6 +4,8 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.domain.Auditable;
+import org.springframework.data.jpa.domain.AbstractAuditable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -13,7 +15,7 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @NamedQuery(name = "Contact.findCustom",
         query = "select c from Contact c where lower(c.firstName) = ?1 or lower(c.lastName) = ?1")
-public class Contact {
+public class Contact  {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

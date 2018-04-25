@@ -5,22 +5,30 @@ import net.boddin.clouddemo.entity.ShortContact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 @RestController
 public class ContactController {
-    private final ContactRepository repository;
 
     @Autowired
-    public ContactController(ContactRepository repository) {
-        this.repository = repository;
-    }
+    private  ContactRepository repository;
+
+    @Autowired
+    private  EntityManager entityManager;
+
+//    @Autowired
+//    public ContactController(ContactRepository repository, EntityManager entityManager) {
+//        this.repository = repository;
+//        this.entityManager = entityManager;
+//    }
 
     @RequestMapping("contacts")
     public Collection<Contact> list() {
         final List<Contact> list = new ArrayList<>();
+
         repository.findAll().forEach(list::add);
         return list;
     }
@@ -37,12 +45,12 @@ public class ContactController {
 
     @PostMapping("contacts/{id}/firstname")
     public Contact setFirstnameForId(@PathVariable Long id, @RequestBody Contact contact){
-        repository.setFirstnameForId(contact.getFirstName(), id);
-        /*
+        // repository.setFirstnameForId(contact.getFirstName(), id);
+
         Contact dbContact = repository.findOne(id);
         dbContact.setFirstName(contact.getFirstName());
         repository.save(dbContact);
-         */
+
         return repository.findOne(id);
     }
 
