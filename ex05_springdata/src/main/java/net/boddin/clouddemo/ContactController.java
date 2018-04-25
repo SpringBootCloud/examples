@@ -16,8 +16,6 @@ public class ContactController {
     @Autowired
     private  ContactRepository repository;
 
-    @Autowired
-    private  EntityManager entityManager;
 
 //    @Autowired
 //    public ContactController(ContactRepository repository, EntityManager entityManager) {
