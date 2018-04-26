@@ -3,6 +3,9 @@ package net.boddin.clouddemo;
 import net.boddin.clouddemo.entity.Contact;
 import net.boddin.clouddemo.entity.ShortContact;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -25,8 +28,16 @@ public class ContactController {
         return list;
     }
 
+    @RequestMapping("contacts/paged")
+    public Page<Contact> listPaged() {
+        PageRequest request = new PageRequest(0,2, Sort.Direction.ASC, "firstName", "lastName");
+        Page<Contact> all = repository.findAll(request);
+        return all;
+    }
+
     @RequestMapping("contacts/{id}")
     public Contact byId(@PathVariable Long id){
+
         return repository.findOne(id);
     }
 

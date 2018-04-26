@@ -6,12 +6,13 @@ import net.boddin.clouddemo.entity.ShortContact;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 
 @Transactional
-public interface ContactRepository extends CrudRepository<Contact, Long> {
+public interface ContactRepository extends PagingAndSortingRepository<Contact, Long> {
 
     Collection<Contact> findByLastNameLikeIgnoreCase(String lastName);
     long countByLastNameLikeIgnoreCase(String lastName);
